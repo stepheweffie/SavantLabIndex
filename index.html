@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SavantLab</title>
+</head>
+<body>
+
+<div style="text-align:center">
+  <button onclick="playPause()">Play/Pause</button>
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="1090">
+    <source src="upsidedown.webm" type="video/webm">
+
+    Your browser does not support HTML video.
+  </video>
+</div>
+
+<script>
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+  if (myVideo.paused)
+    myVideo.play();
+  else
+    myVideo.pause();
+}
+
+function makeBig() {
+    myVideo.width = 760;
+}
+
+function makeSmall() {
+    myVideo.width = 420;
+}
+
+function makeNormal() {
+    myVideo.width = 600;
+}
+</script>
+
+<p>Video courtesy of <a href="https://www.savantofillusions.org/" target="_blank">www.savantofillusions.org</a>.</p>
+<p>Content provided under Creative Commons https://creativecommons.org/licenses/by-nc-sa/4.0/</p>
+<p>Video does not start automatically. Push Play/Pause button on the controls. Screen sizes optimized for larger viewports.</p>
+</body>
+</html>
+
+
